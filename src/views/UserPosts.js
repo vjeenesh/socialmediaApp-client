@@ -2,13 +2,11 @@ import { useQuery } from "@apollo/client";
 import React, { useContext } from "react";
 import { Loader, Grid, Transition, Header, Image } from "semantic-ui-react";
 import PostCard from "../components/PostCard";
-import { AuthContext } from "../context/auth";
 
 import { GET_POSTS_QUERY } from "../utils/graphql";
 
 function UserPosts(props) {
   const username = props.match.params.username;
-  const { user } = useContext(AuthContext);
   const {
     loading,
     error,
